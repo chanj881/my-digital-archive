@@ -256,3 +256,82 @@ h2{
         font-size: 9px;
     }
 }
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+
+
+  
+  .code {
+    font-size: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    color: hsl(0, 0%, 25%);
+    border-radius: 1rem;
+    justify-content: center;
+  }
+  
+  .code:hover {
+    cursor: pointer;
+  }
+  
+  .digit {
+    display: flex;
+    height: 100%;
+    padding: .9rem;
+  }
+
+  
+  .digit span {
+    scale: calc(var(--active, 0) + 0.8);
+    filter: blur(calc((1 - var(--active, 0)) * 1rem));
+    transition: scale calc(((1 - var(--active, 0)) + 0.2) * 1s), filter calc(((1 - var(--active, 0)) + 0.2) * 1s);
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .digit:first-of-type {
+    padding-left: 5rem;
+  }
+  .digit:last-of-type {
+    padding-right: 5rem;
+  }
+  
+  :root {
+    --lerp-0: 1; /* === sin(90deg) */
+    --lerp-1: calc(sin(50deg));
+    --lerp-2: calc(sin(45deg));
+    --lerp-3: calc(sin(35deg));
+    --lerp-4: calc(sin(25deg));
+    --lerp-5: calc(sin(15deg));
+  }
+  
+  .digit:is(:hover, :focus-visible) {
+    --active: var(--lerp-0);
+  }
+  .digit:is(:hover, :focus-visible) + .digit,
+  .digit:has(+ .digit:is(:hover, :focus-visible)) {
+    --active: var(--lerp-1);
+  }
+  .digit:is(:hover, :focus-visible) + .digit + .digit,
+  .digit:has(+ .digit + .digit:is(:hover, :focus-visible)) {
+    --active: var(--lerp-2);
+  }
+  .digit:is(:hover, :focus-visible) + .digit + .digit + .digit,
+  .digit:has(+ .digit + .digit + .digit:is(:hover, :focus-visible)) {
+    --active: var(--lerp-3);
+  }
+  .digit:is(:hover, :focus-visible) + .digit + .digit + .digit + .digit,
+  .digit:has(+ .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
+    --active: var(--lerp-4);
+  }
+  .digit:is(:hover, :focus-visible) + .digit + .digit + .digit + .digit + .digit,
+  .digit:has(+ .digit + .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
+    --active: var(--lerp-5);
+  }
