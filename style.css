@@ -88,7 +88,6 @@ section{
 }
 .file5{
     background-color: rgb(201, 217, 255);
-    background-image: linear-gradient(rgb(201,217,255),white);
 }
 .file6{
     background-color: rgb(255, 232, 239);
@@ -107,9 +106,22 @@ section{
     border-radius: 20px;
     border-style: solid;
     border-color:rgb(81, 81, 81);
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
     margin: auto;
     margin-top: -20px;
+}
+.box-image{
+  text-align:center;
+  padding: 20px;
+  background-color:rgb(255, 255, 255);
+  border-radius: 20px;
+  border-style: solid;
+  border-color:rgb(81, 81, 81);
+  margin: auto;
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 700px;
 }
 .lastbox{
     text-align:left;
@@ -118,7 +130,8 @@ section{
     border-radius: 20px;
     border-style: solid;
     border-color:rgb(81, 81, 81);
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
     margin: auto;
     margin-top: -20px;
     padding-bottom:85px;
@@ -241,7 +254,7 @@ h2{
     filter: grayscale(1);
     transition: filter 0.5s;
     transition: all 0.25s linear;
-    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1));
+    animation-delay: calc(((10s / var(--quantity)) * (var(--position) - 1)) );
 }
 .slider .list .item img{
     width: 100%;
@@ -267,19 +280,62 @@ h2{
 
 @media screen and (max-width:930px){
     body {
-        font-size: small;
+        font-size: 15px;
     }
     div{
-        font-size: small;
+        font-size: 15px;
+    }
+    .card{
+      width:90%;
+      height:200px;
+        }
+        .card:hover{
+          height: 700px;
+        }
+    .card h3{
+      font-size:55px;
+    }
+    .card p{
+      font-size:12px;
+    }
+    .code li{
+      font-size: 50px;
+      padding: .7rem;
+    }
+    .box-image img{
+      width:95%;
     }
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:800px){
     body {
-        font-size: 8.5px;
+        font-size: 12px;
     }
     div{
-        font-size: 8.5px;
+        font-size: 12px;
+    }
+    .foot img{
+      width:80%;
+    }
+    .card{
+      width:95%;
+      height:200px;
+        }
+        .card:hover{
+          height: 1050px;
+        }
+    .card h3{
+      font-size:40px;
+    }
+    .card p{
+      font-size:10px;
+    }
+    .code li{
+      font-size: 30px;
+      padding: .5rem;
+    }
+    .box-image img{
+      width:90%;
     }
 }
 
