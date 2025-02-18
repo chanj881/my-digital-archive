@@ -432,3 +432,6 @@ h2{
   .digit:has(+ .digit + .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
     --active: var(--lerp-5);
   }
+
+
+
