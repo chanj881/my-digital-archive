@@ -3,7 +3,7 @@ body{
     color: rgb(81, 81, 81);
     padding-top: 50px;
     padding-bottom: 50px;
-    font-size: 20px;
+    font-size: 15px;
     font-family: "argent-pixel-cf", sans-serif;
     text-align: center;
     overflow-x: hidden;
@@ -281,6 +281,7 @@ h2{
 @media screen and (max-width:930px){
     body {
         font-size: 15px;
+        overflow: hidden;
     }
     div{
         font-size: 15px;
@@ -307,28 +308,35 @@ h2{
     }
 }
 
-@media screen and (max-width:800px){
+@media only screen and (max-width: 600px) {
     body {
         font-size: 12px;
     }
     div{
         font-size: 12px;
     }
+    .text{
+      font-size:40px;
+    }
+    h2{
+      font-size:30px;
+    }
+
     .foot img{
       width:80%;
     }
     .card{
-      width:95%;
-      height:200px;
+      width:100%;
+      height:150px;
         }
         .card:hover{
           height: 1050px;
         }
     .card h3{
-      font-size:40px;
+      font-size:35px;
     }
     .card p{
-      font-size:10px;
+      font-size:8px;
     }
     .code li{
       font-size: 30px;
@@ -337,6 +345,8 @@ h2{
     .box-image img{
       width:90%;
     }
+
+  
 }
 
 
