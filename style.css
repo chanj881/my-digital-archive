@@ -345,7 +345,12 @@ h2{
     .box-image img{
       width:90%;
     }
-
+    .box {
+      border-width: 1px;
+    }
+    .lastbox{
+      border-width: 1px;
+    }
   
 }
 
